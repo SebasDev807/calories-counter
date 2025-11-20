@@ -1,6 +1,6 @@
 import type { Activity } from "@/interfaces";
 import type { ActivityActions } from "@/reducers";
-import { useEffect, useState, type ChangeEvent, type Dispatch, type FormEvent } from "react";
+import { useState, type ChangeEvent, type Dispatch, type FormEvent } from "react";
 import { v4 as uuid } from "uuid";
 
 
@@ -12,8 +12,8 @@ interface Props {
 
 export const useActivity = ({
     dispatch,
-
-    initialState = { id: uuid(), calories: 0, category: 1, name: '' } }: Props) => {
+    initialState = { id: uuid(), calories: 0, category: 1, name: '' }
+}: Props) => {
 
     const [activity, setActivity] = useState<Activity>(initialState);
 
